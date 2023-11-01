@@ -1,0 +1,26 @@
+import java.util.Scanner;
+//Linear array for unsorted list ;  Extra : used scanner for the value in.
+class Unsorted{
+    public static void main(String[] args) {
+
+        Scanner loc = new Scanner(System.in);
+        System.out.print("Enter the Value for the position : ");
+        int target = loc.nextInt(); //Scanner property
+        int Values[]= {20,10,30,50,40};  //Unsorted Array
+        int pos = -1 , i = 0 ;
+        while (i < Values.length){
+            if (Values[i] == (target)){
+                pos = i + 1;
+
+            }
+            i++;
+
+        }
+        if (pos == -1){
+            System.out.println("The number u given is invalid in Array");
+        }
+        else {
+            System.out.println("The position of the number you given is :"+ pos);
+        }
+    }
+}

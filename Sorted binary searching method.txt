@@ -1,0 +1,28 @@
+//sorted binary searching method.
+class Sorted{
+    public static void main(String[] args) {
+        int value = 50;
+        int Array[]={10 , 20 , 30 , 40 , 50};
+        int start = 0 , end = Array.length -1;
+        int pos = -1 ;
+        while (i <Array.length){
+            int mid = (start+end)/2;
+            if (Array[mid]==value){
+                pos = mid+1;
+                break;
+            } else if (Array[mid]>value) {
+                end = mid -1;
+
+            }
+            else {
+                start = mid +1;
+            }
+        }
+        if (pos ==-1){
+            System.out.println("Invalid Number");
+        }
+        else{
+            System.out.println("The index number : " + pos);
+        }
+    }
+}
